@@ -158,6 +158,6 @@ function keyPressed() {
 // to playing keys  on a midi controller which is what i want to do and want to do soon
 
 function keyReleased() {
-  mp = false;
+  setTimeout((mp = false), 300);
   keys.splice(0, 1);
 }
