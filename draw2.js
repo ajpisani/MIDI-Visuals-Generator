@@ -12,7 +12,7 @@ let keys = [];
 // setup function, runs once, used to set up a canvas
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight, WEBGL);
+  createCanvas(window.innerWidth / 2, window.innerHeight / 2, WEBGL);
   frameRate(50);
   colorMode(HSB);
   background(0, 0, 0);
@@ -21,7 +21,7 @@ function setup() {
 // function to resize canvas
 
 function windowResized() {
-  resizeCanvas(window.innerWidth, window.innerHeight, WEBGL);
+  resizeCanvas(window.innerWidth / 2, window.innerHeight / 2, WEBGL);
 }
 
 class numOfKeys {
@@ -39,15 +39,15 @@ class Particles {
     //x position (i want it to start in the center)
 
     this.x = random(
-      -(window.innerWidth / 10) * keys.length,
-      (window.innerWidth / 10) * keys.length
+      -(window.innerWidth / 20) * keys.length,
+      (window.innerWidth / 20) * keys.length
     );
 
     //y position (i want this to start in the center too)
 
     this.y = random(
-      -(window.innerHeight / 10) * keys.length,
-      (window.innerHeight / 10) * keys.length
+      -(window.innerHeight / 20) * keys.length,
+      (window.innerHeight / 20) * keys.length
     );
 
     //x and y speed
@@ -83,7 +83,7 @@ class Particles {
   showParticles() {
     noStroke();
     fill(this.hue, this.sat, this.lifespan, this.alpha);
-    circle(this.x, this.y, this.r);
+    circle(this.x, this.y, this.r * keys.length);
   }
 
   // this function moves the circles
