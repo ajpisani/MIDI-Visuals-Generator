@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>day 7</title>
+    <script src="p5.js" type="module"></script>
+    <script src="slidersAndButtons.js" type="module"></script>
+  </head>
+  <body style="background-color:honeydew">
+    <div>
+      <label for="midiMenu">Midi Input:</label>
+      <select id="midiMenu">
+        <option>Mr Krabs</option>
+        <option>Spunch Bob</option>
+        <option>Sadny Cheese</option>
+      </select>
+    </div>
+    <div>
+      <label for="pAmount">Particle Amount</label>
+      <input id="pAmount" type="range" min="20" max="300"></input>
+      <span id="pAmountS"></span>
+    </div>
+    <div>
+      <label for="sAmount">Shapes Amount</label>
+      <input id="sAmount" type="range" min="20" max="300"></input>
+      <span id="sAmountS"></span>
+    </div>
+    <div>
+      <label for="fAmount">Fade Timer</label>
+      <input id="fAmount" type="range" min="20" max="300"></input>
+      <span id="fAmountS"></span>
+    </div>
+<div>
+  <script src="draw.js"></script>
+</div>
+<div>
+  <br/>
+  <button id="fScreenButton">Full Screen</button>
+</div>
+  </body>
+</html>
